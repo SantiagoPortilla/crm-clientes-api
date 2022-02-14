@@ -37,7 +37,7 @@ async function starExpressServer(params) {
     await DBConecction()
 
     app.listen(config.port, ()=> {
-        console.log(`Server listo en http://localhost:${PORT}`)
+        console.log(`Server listo en http://localhost:${config.port}`)
     })
 }
 

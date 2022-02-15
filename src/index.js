@@ -2,7 +2,7 @@ const express = require("express")
 const morgan = require("morgan")
 const cors = require("cors")
 
-const config = require("./config/index")
+const config = require("./config")
 
 const DBConecction = require("./database/DBConnection")
 const productRoutes = require("./routes/product.route")
@@ -28,11 +28,6 @@ async function starExpressServer(params) {
     app.get("/", (request, response)=>{
         response.json({message: "Hola desde el servidor Express.js"})
     })
-
-    app.post("/create-product", (req, res)=>{
-
-    })
-
 
     await DBConecction()
 

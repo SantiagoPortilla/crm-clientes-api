@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const config = require("../config/index")
+const config = require("../config")
 
 const DBConnection = async()=>{
     try{

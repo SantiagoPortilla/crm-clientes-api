@@ -2,11 +2,10 @@ const express = require("express")
 const morgan = require("morgan")
 const cors = require("cors")
 
-const config = require("./config")
-
 const DBConecction = require("./database/DBConnection")
 const productRoutes = require("./routes/product.route")
 const customerRoutes = require("./routes/customer.route")
+const config = require("./config")
 
 // Camel case
 async function starExpressServer(params) {
@@ -32,7 +31,7 @@ async function starExpressServer(params) {
     await DBConecction()
 
     app.listen(config.port, ()=> {
-        console.log(`Server listo en http://localhost:${config.port}`)
+        console.log(`Server listo en http://localhost:${config.port}`);
     })
 }
 

@@ -8,7 +8,7 @@ const getCustomers = async (req, res) => {
 
         const customers = await Customer.find({ 
             $or: [{name: regex}, {email: regex}, {company: regex}] 
-        }).limit(limit).sort({name: 1})
+        })
 
         return res.status(200).json({
             ok: true,
